@@ -1,0 +1,40 @@
+day1：任务：验证码发送，通过java程序，向用户输入的手机号码发送验证码
+      任务线索：1.网址组成分析
+              2.URL类使用
+              3.编码表
+              4.智能聊天机器人实现
+              5.短信发送API
+1.网址的组成分析
+网址组成：协议：//域名：端口号/虚拟路径？参数列表#锚点
+        协议：是计算机与计算机之间的协议，用于控制传输速率以及传输编码，出错控制
+        域名：ip地址的别名，公网ip(网线),ip地址是计算机的唯一标识
+             域名服务商。DNS解析商。www.baidu.com
+        端口号：范围：0-65535
+        虚拟路径：像文件夹一样，对网站资源分类
+        参数列表：向服务器发送的数据，组成方式：由多个键值对组成，多个键值对之间哟个&间隔
+
+2.URL类的使用
+目标：访问网络资源
+    （1）准备一个URL对象,url:URL url=new URL("网址");
+    （2）连接服务器:URLConnection conn = url.openConnection();
+    （3）加载网络资源:InputStream is = conn.getInputStream();
+    （4）将is装饰为能一次读取一行的字符缓冲输入流:BufferedReader br = new BufferedReader(new InputStreamReader(is))
+    （4）读取一行资源：String text = br.readLine();
+    （5）显示：System.out.println(text);
+    （6）关闭连接：br.close();
+
+3.编码表
+文字与数字对应的字典表格;BK,unicode,UTF-8
+
+4.如何与服务器沟通
+（1）与机器人交互
+地址：https://api.jisuapi.com/iqa/query
+示例：https://api.jisuapi.com/iqa/query?appkey=62958a3a6ef3c56d&question=河南天气
+参数列表：appkey：秘钥，值为：62958a3a6ef3c56d
+        question：与智能机器人的聊天内容 ，例如：北京天气
+（2）短信发送：
+地址：https://itdage.com/kkb/kkbsms
+示例：https://itdage.com/kkb/kkbsms?key=xzk&number=13253357452&code=666123
+参数列表：key：密钥，值为xzk
+        number：接收验证码的手机号
+        code:A-Za-z0-9的验证码内容
