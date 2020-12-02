@@ -1,0 +1,56 @@
+一.Swagger简介
+    1.后端时代：前端只是管理静态页面；html->后端负责，模板引擎JSP
+    2.前后端分离：Vue+SpringBoot
+        （1）后端：控制层，服务层，数据访问层【后端团队】
+        （2）前端：控制层，视图层【前端团队】
+                 伪造后端数据，json，不需要后端，前端依然可以运行。
+        （3）前后端交互：Api接口
+        （4）前后端相对独立：松耦合
+        （5）前后端可以建立在不同的服务器上
+    3.前端测试接口：postman；后端需要实时更新接口和信息。
+    4.引入->Swagger：（1）号称世界上最流行的Api框架
+                    （2）RestFul Api文档在线自动生成工具->Api文档与Api定义同步更新
+                    （3）直接运行，可以在线测试Api接口
+                    （4）支持多种语言：java,php……
+
+二.项目中使用Swagger需要Springfox：swagger2+ui（在maven官网下载这两个包或者直接在maven中配置）
+三.SpringBoot集成Swagger
+    (1)新建一个Springboot-web项目
+    (2)导入依赖包
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+    (3)编写一个Hello工程
+    (4)配置Swagger
+        @Configuration
+        @EnableSwagger2  //开启Swagger2
+        public class SwaggerConfig {
+        }
+    (5)测试运行：localhost:8080/swagger-ui.html
+四.配置Swagger
+    (1)Swagger的bean实例Docket
+        @Configuration
+        @EnableSwagger2/*开启Swagger2*/
+        /*配置Swagger的Docket的bean实例*/
+        @Bean
+        public Docket docket() {
+            return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo());
+        }
+       /*配置Swagger信息*/
+       private ApiInfo apiInfo();
+    (2)配置是否启动Swagger
+    问题：我只希望我的Swagger在生产环境中启动，在发布的时候不启动？
+五.总结
+    1.可以通过Swagger给一些比较难理解的属性或者接口增加注释
+    2.接口文档实时更新
+    3.可以在线测试
+    注意：在发布的时候一定要关闭Swagger，出于安全考虑。
