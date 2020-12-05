@@ -1,0 +1,62 @@
+JavaWeb
+    1.web开发：
+        1.1 静态web：html,css，提供给所有人的数据不会发生改变，都一样
+        1.2 动态web：淘宝，几乎所有的网站提供给用户的网站会随着用户的不同时间和地点看到的信息不同
+                   技术栈：serlvlet/jsp,ASP,PHP
+        在java中，动态web资源开发的技术统称为Javaweb
+    2.web应用：可以提供给浏览器访问的程序
+        2.1 一个web应用由多部分组成（静态web，动态web）：html，css，js，jsp，servlet，java程序，jar包，配置文件
+        2.2 web应用程序编写完毕后要给外界访问，需要一个服务器来统一管理。
+    3.静态web：
+        3.1 *.html,htm这些都是网页的后缀，如果服务器上一直存在这些东西，我们就可以一直访问。
+        3.2 客户端->一次请求request->WebService->服务器->index.html
+            客户端<-一次响应<-WebService<-服务器<-index.html
+        3.3 静态web的缺点：无法与数据库交互，伪动态，javaScript实际开发中应用的多
+    4.动态web：
+        4.1 客户端->一次请求request->WebService Plugin->动态资源
+              |                        静态|资源         |
+              |<------一次响应<--------WebService <- 动态web资源(JSP/Servlet)
+                                      File|System       |
+                                                      JD|BC
+                                                      数据库
+        4.2 缺点：加入服务器的动态web资源出现了错误，需要重新编写后台程序：停机维护
+        4.3 优点：程序可以动态更新，所有用户看到的不是同一个页面，可以与数据库交互。
+    5.web服务器技术：
+        5.1 ASP：微软，国内最早流行的ASP
+                在html中嵌入了VB脚本，ASP+COM
+                维护成本高！C#语言
+                IIS服务器
+        5.2 PHP:开发速度快，功能强大，跨平台，代码很简单
+                无法承载大访问量的情况（局限性）
+        5.3 JSP/Servlet:
+                sun公司主推的B/S框架，可以承载三高带来的问题（高并发，高性能，高维护）
+                B/S：浏览器服务器；C/S：客户端服务器
+    6.web服务器：服务器是一种被动操作，用来处理用户的一些请求和给用户一些响应信息
+        6.1 IIS：微软的ASP……Windows自带的
+        6.2 tomcat：实际运行jsp和servlet
+                    /bin：启动关闭的脚本文件
+                    /config：配置
+                    /lib：插件，依赖的jar包
+                    /log日志
+                    /webapps：访问网站的文件夹
+                    启动关闭tomcat：shutup，shutdown
+             6.2.1可以配置启动端口号/config/server修改tomcat默认端口号8080
+             6.2.2可以修改localhost,system32/drivers/etc/可以修改localhost->www.syr.com
+             6.2.3可以添加网页，默认访问的是webapps下的网页
+             6.2.4 tomcat：8080，mysql：3306，http:80，https：443
+        6.3 网站时如何访问的？
+            （1）输入一个URL回车
+            （2）检查本机中的sysytem32/drivers/etc是否有对应的域名映射
+            （3）有->直接返回对应的ip地址，这个ip地址中有我们需要访问的web程序
+                没有->去DNS服务器去查找
+        6.4 发布一个网站：将自己的网站放到tomcat中指定的webapps下就可以了
+            默认访问的是ROOT，编写自己的syr，访问自己编写的localhost：8080/syr
+    7.http协议：
+        7.1 http请求：客户端-发送请求-服务器
+            （1）请求行：get：请求携带的参数少，大小有限制，在URL中显示，高效但不安全
+                       post：请求携带的参数不限，URL不显示，安全
+            （2）消息头
+        7.2 http响应：服务器-响应-客户端
+            （1）响应体
+            （2）状态码：200-OK，4**：页面找不到（404），3**：重定向（303），5**:服务器代码消息（500,502网关错误）
+    8.在浏览器中地址输入地址回车访问的一瞬间到页面展示，经历了什么？
