@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>healthcode</title>
+		<link rel="stylesheet" href="css/heathcode.css">
+	</head>
+	<body>
+		<!--大容器-->
+		<div id="menu">
+			<!--图片部分-->
+			<img src=""> 
+			<!--logo部分-->
+			<section class="logo">
+				<h1>河南<span>健康码</span></h1>
+				<p></p>
+			</section>
+			<!--选择城市-->
+			<section class="city">
+				
+				
+			</section>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+	/*清除出浏览器默认边距*/
+	margin: 0;/*外边距*/
+	/*border边框*/
+	padding: 0;/*内边距*/
+}
+
+#menu{
+	width:800px;
+	height:1000px;
+	background-color: #0B8CEF;
+	/*margin: 10px;上下左右*/
+	margin: 10px auto;/*上下，左右（auto自适应）*/
+	/*margin: 0 10px 5px;	/*上外边距，左右，下*/*/
+	/*margin: 10px,12px,5px,23px;上，右，下，左*/	
+}
+
+#menu>img{
+	/*左外边距向右移动*/
+	margin-left: 50px;
+}
+
+#menu>.logo{
+	/*文本居中*/
+	text-align: center;
+	font-size: 45px;
+	color: white;
+	margin-top:200px ;
+}
+
+#menu>.logo span{
+	color: yellow;
+}
+
+#menu>.logo p{
+	font-size: 16px;
+}
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>information</title>
+	</head>
+	<body>
+		<form>
+			<h5>*姓名</h5>
+			<input type="text" name="name"><br/>
+			<h5>*证件号码</h5>
+			<input type="text" name="id"><br/>
+			<h5>*手机号码</h5>
+			<input type="tel" name="tel"><br/>
+			<h5>*健康信息</h5>
+			<div>
+				<form>
+					您当前是否在郑州？【含郑州所有区县（市），下同】<br/>
+					<input type="radio" name="是">是
+					<input type="radio" name="否">否
+					<hr/>最近14天是否离开过所在地？<br/>
+					<input type="radio" name="是">是
+					<input type="radio" name="否">否
+					<hr/>您是否有发热，气促。呼吸道症状？<br/>
+					<input type="radio" name="是">是
+					<input type="radio" name="否">否
+				</form>
+
+			</div>
+		</form>
+	</body>
+</html>
+
+
+

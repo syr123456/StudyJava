@@ -1,0 +1,175 @@
+web前端3层架构
+
+结构 HTML
+表现CSS
+行为JavaScript
+
+
+JavaScript：弱类型的基于原型的脚本语言
+
+DOM: document 文档类型
+
+
+javascript的引入方式
+
+1.直接在script标签中写js代码
+  <script>
+			alert("hello ,javaScript")
+			
+  </script>
+  
+2.在script标签中使用src属性引入.js文件  
+   <script src="js/index.js"></script> 
+
+javascript中的具体语法：
+
+1.js的类型
+	数值类型 number
+	字符串  string
+	空  null
+	未定义 Undefined
+	数组array
+	布尔 boolean 
+	对象object
+
+2.变量和常量
+  var 变量名 = 变量值;
+  
+  js中不论变量或者常量是什么类型，全部是var来声明
+  
+  如果一个变量不添加var/let/const那么这个变量一定是全局变量
+  
+3.需要查看变量或者常量的类型可以使用typeof
+   var t =  typeof(a);
+	alert("t = "+t)  t=number
+  
+流程控制语句和运算符
+和Java中一致
+比较运算中，有一个 
+=== 数据相等，数据类型也一致    
+==  数据相等就会返回true
+	var a = "5";//a是string
+	var b = 5; // b是number
+	
+	var boo = a===b;  false
+	var boo = a==b;  true
+	
+	if else if else
+	
+	for
+	
+	while
+	
+	dowhile
+
+javascript中的函数
+
+	1.函数不调用不执行
+	2.浏览器不同显示的效果也是不同的
+	3.函数的写法
+	 function 函数的名称（函数的形参）{
+	   js代码块
+	 }
+	4.调用函数
+	 函数名称（实际参数）
+	
+	函数的形参是为了约束实际参数的个数和类型
+
+	NaN不是一个数字
+	
+	isNaN测试一个数是不是数字，是数字false，不是数据就返回true
+	
+   函数必须function来声明，函数名是需要遵从标识符规范
+   函数就是方法()，{声明函数的代码块}
+   形式参数可以不传递类型，直接写出传递参数的个数
+   
+   function  a(x,y){
+   		代码块
+   }
+
+	实际参数，是在调用函数时使用的，传递的实际参数类型是随意的
+
+内置对象：这门语言帮助我们已经写好的，可以直接拿来使用的对象
+	类似于java的常用类
+	
+Array
+  声明数组
+  var arr = new Array(10);
+  
+  var arr2 = [5,6,8,9,1];
+  
+  数组添加数据
+  arr.push(数据)
+ 数组删除数据
+  arr.delete()  
+ 数组遍历
+  for(var i = 0;i<arr.length;i++){
+    arr[i]
+  } 
+ 
+  for in 遍历
+  m 代表是下标
+	for (var m in arr2) {
+		document.write(arr2[m])
+	}
+ 
+ 数组排序
+ arr.sort();
+ 数组逆序
+ arr.reverse(); 
+   
+
+String
+
+作业：
+
+在浏览器写出你的身份证号码
+然后，截取出生年月日，判断性别？
+
+
+Date
+ 声明Date对象
+ var date = new Date(); 当前的系统时间
+ 
+  date Tue Sep 22 11:11:50 UTC+0800 2020
+
+  date.toLocalString();  2020年9月22日 11:11:50
+
+  date可以通过
+  getYear( ) 获取年
+  getMonth() var month = date.getMonth()+1;  因为 月份 从0开始的  1月就是0 9月就是8 
+  getDay()  
+  getHours()
+  getMinutes()
+  getSeconds()
+  getMillSeconds()
+  
+
+常用的弹出框：
+	alter() 带一个"确定"按钮的弹出框，没有任何返回值
+	
+	prompt()返回的数据就是输入的值
+	带一个输入框和“确定”和“取消”按键的弹出框
+	返回的数据，点击“确定”。返回的是我们输入的数据
+	点击“取消”，返回的是空null
+	
+	confirm() 带“确定”和“取消”按键的弹出框
+	如果点击的是“确定”--true
+	如果点击的是“取消”--false
+
+常用事件
+js中的事件是借助于on事件监听
+   鼠标事件
+	   单击事件
+	    click
+	    
+	  悬浮事件
+	   mouseenter
+	   mouseover
+	   mouseleave
+	   hover  
+	
+DOM
+ document.getElementById()	                通过id获取元素（唯一的元素）
+ document.getElementsByClassName()	通过类名获取元素 （获取多个元素，返回的是数组）
+ document.getElementsByTagName()	通过标签名获取元素（需要使用下标来获取到底是哪个元素）

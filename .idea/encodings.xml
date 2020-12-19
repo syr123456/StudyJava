@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/javaweb-01/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/syr/No6_Css/20200916--table1.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/syr/No6_Css/20200916--table2.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/syr/No6_Css/20200917--form.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/syr/No6_Css/20200917--login.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/syr/No6_Css/20200918--总结知识点.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/syr/No6_Css/20200918--数据列表.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/syr/No6_Css/20200918--选择器.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/syr/No6_Css/20200919--mine---heathcode.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/syr/No6_Css/20200921--healthcode.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

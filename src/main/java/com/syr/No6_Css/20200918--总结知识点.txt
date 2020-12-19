@@ -1,0 +1,112 @@
+1.form  2个属性：action和method
+            控件：
+                   input的属性type，name，value，required，placeholder
+                            type属性的属性值：text文本框，password密码框，submit提交按键
+                                                         radio单选框，checkbox复选框，email邮箱
+                                                         reset重置按钮，image图片提交，button按钮
+                                                         hidden隐藏框，tel电话号码框，search搜索框
+                                                         number数值框，range数值滑块，url路径
+                                                         color颜色取框，data，datatime-local日期字段，file文件上传框
+                  select下拉框，下拉列表
+                           option列表项，value提交后台服务器的值
+                           optgroup列表分组，属性label给分组命名
+	           <select name="" id="">
+		<option value="-1">请选择你的出生年份</option>
+		<optgroup label="90后">
+		    <option value="1998">1998</option>
+		    <option value="1997">1999</option>
+		</optgroup>
+	          </select>
+                  textarea文本域 都是只读 或者不可操作
+                            常用属性cols和rows是来粗略计算文本域的宽度和高度，精确设置需要用style样式来设置
+                               <textarea name="" id="" style="widht:50px;height:20px">
+			滚滚长江
+		</textarea>
+                  readonly只读
+                  disabled不可操作的
+                  datalist数据列表，和select很相似，通常和input一起使用
+                              <form action="">
+		  请选择你的专业：
+		  <input type="text" id="datalist" list="list"/>
+		  <datalist id="list">
+			<option value="计算机科学与技术">计算机科学与技术</option>
+			<option value="计算机科学与技术">计算机科学与技术</option>
+			<option value="计算机科学与技术">计算机科学与技术</option>
+		  </datalist>
+		</form>
+2.列表
+   有序列表ol，li
+               <!--ol有序列表，li-->
+	      <h1>你喜欢吃什么水果？（有序列表）</h1>
+	      <ol type="a">
+		<li>苹果</li>
+		<li>西瓜</li>
+	</ol>
+   无序列表ul，li
+   自定义列表dl，dt，dd
+               <dl>
+	       <dt>
+		语文
+		<dd>interesting</dd>
+		<dd>happiness</dd>
+	       </dt>
+	       <dt>
+		数学
+		<dd>interesting</dd>
+		<dd>easy</dd>
+	       </dt>
+	</dl>
+
+3.css:Cascading Style Sheet 层叠样式表，可以设置htnl中标签样式
+         html+css+js        html：结构层+css：表现层（装饰）+js行为层（javascript）
+         css三大特征:层叠，冲突，继承
+         3.1行内引入：
+             优点：优先级高
+             缺点：使用范围小，作用于局部范围
+             例如：<table align="center" cellspacing="20" cellpadding="0">
+         3.1内嵌引入:
+             优点：可以作用于同一个页面的多个元素
+             缺点：优先级不高
+             <style>
+	（1）id选择器：
+		id="唯一值"   style #id值{样式}
+		/*id选择器*/
+		#div2{
+		background-color: grey;
+		}
+        	 （2）class选择器：
+		类选择器可以有多个，.class值{样式}
+                 	/*class类选择器*/
+		.div4{
+			background-color: yellow;
+		}
+         	（3）层级选择器：
+		>直接后代
+		空格 后代元素
+		，并列元素
+		 /*层级选择器*/
+		section div{
+			background-color: red;
+		}
+         	（4）结构伪类选择器：
+		以nth-child()为例
+		  /*nth-child选择器，2n+1->odd*/
+		#table1 tr:nth-child(2n+1){
+			background-color: aquamarine;
+		}
+		/*2n->even*/
+		#table1 tr:nth-child(2n){
+			background-color: pink;
+			}
+        	 （5）标签选择器
+         	        /*标签选择器*/
+		div{
+			background-color: red;
+		}
+               </style>
+         3.2外联引入
+	优点：可以作用于多个页面
+	缺点：优先级低
+	（1）先写出css文件：index.css
+	（2）在html页面中写出：<link rel="stylesheet" href="index.css">(href中的是相对路径)
+         比较：实际上，行内引入的优先级最高，其次内嵌和外联的优先顺序是根据引入顺序决定的。

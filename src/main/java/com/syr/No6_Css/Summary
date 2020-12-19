@@ -1,0 +1,150 @@
+CSS:
+1.CSS介绍
+        1.1.css简介：Cascading style Sheet层叠级联样式表
+                  css：表现（美化页面）
+                  字体，颜色，边距，高度，宽度，背景图片，网页定位，网页浮动
+        1.2.css发展史：CSS1.0
+                    CSS2.0 DIV(块)+CSS，HTML与CSS结构分离的思想，网页变得简单，SEO
+                    CSS2.1 浮动，定位
+                    CSS3.0 圆角，阴影，动画……浏览器兼容性
+        1.3.css优势: 内容与表现分离
+                  网页结构表现统一，可以实现复用
+                  样式十分丰富
+                  建议使用独立于html的css文件
+                  利用SEO，容易被搜索引擎收录！
+2.三种引入css的方法
+        Attention：执行优先级(就近原则)，行内引入>内嵌引入>外联引入
+        2.1外联引入：两种方式(链接式，导入式)
+           链接式：<link rel="stylesheet" href="index.css">
+           导入式：<style>
+                       @import "index.css";
+                  </style>
+        2.2内嵌引入：<style>
+                        h1{
+                            color: green;
+                        }
+                    </style>
+        2.3行内引入：<h1 style="color: red">喜欢你</h1>
+3.选择器：index.html
+        Attention：优先级,id选择器>class选择器>标签选择器(固定的)
+        3.1 id选择器，必须保证id全局唯一
+            /*id选择器*/
+            #loveme{
+                color: aqua;
+            }
+            <h2 id="loveme">id选择器</h2>
+        3.2 类选择器，选择所有的class属性一致的标签，跨标签
+            /*类选择器*/
+            .love{
+                color: black;
+            }
+            <h2 class="love">类选择器</h2>
+        3.3 标签选择器，选择页面中所有这个标签的元素
+            /*标签选择器*/
+            h2{
+                color: green;
+            }
+            <h2>内嵌</h2>
+        3.4 层级选择器
+            /*后代选择器，祖爷爷 爷爷 爸爸 你*/
+            body li{
+                color: gold;
+            }
+            /*子选择器 一代，儿子*/
+            body>p{
+                color: red;
+            }
+            /*相邻兄弟选择器，同辈(只有一个)，只选择底下的兄弟标签中的第一个span标签*/
+            .love + span{
+                color: blueviolet;
+            }
+            /*通用选择器，底下的所有兄弟div标签*/
+            .love ~ div{
+                color: brown;
+            }
+        3.5 结构伪类选择器
+            /*ul下的第一个li标签*/
+            ul li:first-child{
+                color: blue;
+            }
+            /*ul下的最后一个li标签*/
+            ul li:last-child{
+                color: aqua;
+            /*选中h3:定位到父亲元素，选择当前的第一个h3元素，如果第一个不是h3标签则不生效*/
+            h3:nth-child(1){
+                color: red;
+            }
+            /*选中父级元素下的h2元素的第一个*/
+            h2:nth-of-type(1){
+                color: red;
+            }
+            /*悬浮变颜色*/
+            a:hover{
+                background-color: white;
+                color: red;
+                /*去掉下划线*/
+                text-decoration: none;
+            }
+        3.6 属性选择器
+            Attention：id+class选择器结合
+            *=包含
+            =绝对等于
+            ^=以开头
+            $=以结尾
+            /*id中有loveme元素的，不加也可以，因为id就是唯一的只需要找h2中有id即可*/
+            h2[id=loveme]{
+                color: red;
+            }
+            /*class中有love元素的*/
+            h2[class*="love"]{
+                color: gold;
+            }
+            /*选中href中以http开头的元素*/
+            a[href^=http]{
+                color: gold;
+            }
+            /*href中以html结尾的*/
+            a[href$=html]{
+                color: gold;
+            }
+4.css美化网页
+        4.1 字体设置 index2.html
+        4.2 文本样式设置 index3.html
+        4.3 超链接伪类：
+            /*鼠标悬浮*/
+            a:hover{
+                color: red;
+                /*阴影颜色 水平偏移 垂直偏移 阴影半径*/
+                text-shadow: red 10px 5px 2px;
+            }
+            /*鼠标点击*/
+            a:active{
+                color: green;
+            }
+        4.4 display和浮动float
+        display：浮动起来的话会脱离标准文档流，需要解决父级塌陷的问题4.5
+        float：方向不可以控制
+            Attention:块元素可以包含行元素，反之则不行
+            块级元素和行元素之间的转换
+            block:块元素
+            inline：行元素
+            inline-block：是块元素，但是可以内联
+        4.5 解决父级塌陷的问题
+            1.增加父级元素的高度
+            2.增加一个空的div标签，清除浮动
+            3.overflow：在父级元素中添加overflow：scorll(滚动条)
+            4.父类添加一个伪类：
+                #father:after{
+                    content:'';
+                    display:block;/*正常元素块*/
+                    clear:both;/*清除浮动*/
+                }
+        4.6 定位
+               相对定位：相对于自己原来的位置偏移
+                       position：relative
+                       top：-20px
+               绝对定位:没有父级元素的定位前提下，相对于浏览器偏移
+                       父级元素存在，相对于父级元素偏移
+                       position：absolute
+               固定定位：
+                       position：fixed

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!--外联引入-链接式-->
+<!--    <link rel="stylesheet" href="index.css">-->
+    <!--内嵌引入-->
+    <style>
+        /*导入式*/
+        /*@import "index.css";*/
+        /*优先级：id选择器>class选择器>标签选择器*/
+        /*标签选择器*/
+        /*h2{*/
+        /*    color: green;*/
+        /*}*/
+        /*id选择器,必须保证id全局唯一*/
+        /*#loveme{*/
+        /*    color: aqua;*/
+        /*}*/
+        /*!*类选择器*!*/
+        /*.love{*/
+        /*    color: black;*/
+        /*}*/
+        /*!*后代选择器*!*/
+        /*body li{*/
+        /*    color: gold;*/
+        /*}*/
+        /*!*子选择器*!*/
+        /*body>p{*/
+        /*    color: red;*/
+        /*}*/
+        /*!*相邻兄弟选择器(只有一个)，只选择底下的第一个span标签*!*/
+        /*.love + span{*/
+        /*    color: blueviolet;*/
+        /*}*/
+        /*!*通用选择器，底下的所有div标签*!*/
+        /*.love ~ div{*/
+        /*    color: brown;*/
+        /*}*/
+        /*!*ul下的第一个li标签*!*/
+        /*ul li:first-child{*/
+        /*    color: blue;*/
+        /*}*/
+        /*!*ul下的最后一个li标签*!*/
+        /*ul li:last-child{*/
+        /*    color: aqua;*/
+        /*!*选中h3:定位到父亲元素，选择当前的第一个h3元素，如果第一个不是h3标签则不生效*!*/
+        /*h1:nth-child(2){*/
+        /*    color: red;*/
+        /*}*/
+        /*!*选中父级元素下的h2元素的第一个*!*/
+        /*h2:nth-of-type(1){*/
+        /*    color: red;*/
+        /*}*/
+        /*a:hover{*/
+        /*    background-color: white;*/
+        /*    color: red;*/
+        /*    !*去掉下划线*!*/
+        /*    text-decoration: none;*/
+        /*}*/
+        /*h2[id=loveme]{*/
+        /*    color: red;*/
+        /*}*/
+        /*h2[class*="love"]{*/
+        /*    color: gold;*/
+        /*}*/
+        /*选中href中以http开头的元素*/
+        /*a[href^=http]{*/
+        /*    color: gold;*/
+        /*}*/
+        /*href中以html结尾的*/
+        a[href$=html]{
+            color: gold;
+        }
+
+
+    </style>
+</head>
+<body class="body">
+
+<a href="index.html">外联引入</a>
+<a href="http://">外联引入</a>
+<h1>外联引入</h1>
+<h2>h2</h2>
+<!--行内引入-->
+<!--<h2 style="color: red">行内引入</h2>-->
+<h2 id="loveme">id选择器</h2>
+<h2 class="love me">类选择器1</h2>
+<h2 class="love item">类选择器2</h2>
+<h2 class="item">类选择器3</h2>
+<span>喜欢你</span>
+<div>喜欢你1</div>
+<div>喜欢你2</div>
+<p>喜欢你</p>
+<p>喜欢你</p>
+<ul>
+    <li>喜欢你</li>
+    <li>喜欢你</li>
+    <li>喜欢你</li>
+    <li>喜欢你</li>
+    <li>喜欢你</li>
+</ul>
+
+</body>
+</html>

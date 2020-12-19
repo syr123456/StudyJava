@@ -1,0 +1,95 @@
+thymeleaf是SpringBoot的模板引擎，是以html文件为基础
+语法：
+怎样将html文件转为模板引擎
+
+第一步：
+<html xmlns:th="http://www.thymeleaf.org">
+第二步：
+在pom.xml依赖文件
+   <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+    等待下载
+
+语法：
+1.th:text  替换文本
+2.th:utext 替换文本可以识别标签
+3.th:each  循环遍历
+       <tr th:each="stu:${list}">
+                    <td th:text="${stu.sno}"></td>
+                    <td th:text="${stu.sname}"></td>
+                    <td th:text="${stu.age}"></td>
+                    <td th:text="${stu.score}"></td>
+       </tr>
+    或者这样写：
+    <td   th:each="stu:${list}" th:text="${stu}" ></td>
+
+4.th:if
+  th:insert
+  th:value
+  th:object
+  。。。
+
+前端  ：显示数据  html/jsp
+                                     控制类（controller）
+后台  ：处理数据，转发或者重定向到页面
+    在Springboot中，
+    启动类
+       其他类（必须是启动类的子级别的类）
+       需要先创建包，然后再创建一个类
+
+     普通类怎样成为控制类
+      需要被注解修饰@Controller
+      import org.springframework.stereotype.Controller;
+
+
+      @Controller
+      public class DemoForThymeleaf {
+
+      }
+
+
+      后台需要借助对象ModelAndView
+      Model 模型：后台java功能  addObject("给前端的变量名",后台的值)
+      View  视图：前端页面功能  setViewName("将跳转哪个页面")
+
+
+    访问的时候
+     @RequestMapping("/test")
+        public ModelAndView test(){
+
+
+        }
+
+    localhost:8080/test
+
+
+作业：
+1.首页index中，点击“立即使用”将选择的城市提交给register页面中的城市
+    假如没有选择任何一个城市，那么点击“立即使用”会弹出“请选择城市”
+2.二维码页面result，需要将第一部分写出来。点击眼睛需要睁开并且姓名和证件号码都能够显示
+    再次点击又不能显示。
+
+    img src = “close” onclick="hiddenOrShow()"
+
+    script代码
+
+     var boo = false;
+
+    function hiddenOrShow(){
+      if(!boo){
+        图片改变睁眼的
+        $("img").attr("src","睁眼图片“);
+        姓名和证件都是**
+        boo = true
+      }else{
+       图片改变闭眼的
+       $("img").attr("src","闭眼图片")
+       姓名和证件都需要显示
+       boo = false;
+      }
+    }
+    hiddenOrShow();
+
+

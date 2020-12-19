@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>健康码首页</title>
+		<!--CSS-->
+		<style>
+			/*标签选择器*/
+			div{
+				background-color: red;
+			}
+			/*id选择器*/
+			#div2{
+				background-color: grey;
+			}
+			/*class类选择器*/
+			.div4{
+				background-color: yellow;
+			}
+			/*nth-child选择器，2n+1->odd*/
+			#table1 tr:nth-child(2n+1){
+				background-color: aquamarine;
+			}
+			/*2n->even*/
+			#table1 tr:nth-child(2n){
+				background-color: pink;
+			}
+			/*层级选择器*/
+			section>div div{
+				background-color: red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			div1
+		</div>
+		<!--id唯一-->
+		<div id="div2">
+			div2
+		</div>
+		<div class="div4">
+			div3
+		</div>
+		<!--class不唯一-->
+		<div class="div4">
+			div4
+		</div>
+		
+		<table id="table1">
+			<tr>
+				<td>S</td>
+				<td>S</td>
+				<td>S</td>
+				<td>S</td>
+			</tr>
+			<tr>
+				<td>S</td>
+				<td>S</td>
+				<td>S</td>
+				<td>S</td>
+			</tr>
+			<tr>
+				<td>S</td>
+				<td>S</td>
+				<td>S</td>
+				<td>S</td>
+			</tr>
+			<tr>
+				<td>S</td>
+				<td>S</td>
+				<td>S</td>
+				<td>S</td>
+			</tr>
+			<tr>
+				<td>S</td>
+				<td>S</td>
+				<td>S</td>
+				<td>S</td>
+			</tr>
+		</table>
+		
+		<hr>
+		<section>
+			<div>
+				<p>
+					<div class="div4">
+						HelloWorld!
+					</div>
+				</p>
+			</div>
+			<p>
+				<div>
+					HelloEveryOne!
+				</div>
+			</p>
+		</section>
+	</body>
+</html>

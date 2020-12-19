@@ -1,0 +1,27 @@
+CSS特征：层叠，继承，冲突
+
+CSS常用样式：
+1.文字样式
+	font-size:文字大小	
+	font-weight:文字是否加粗
+	font-family:文字的字体
+2.文字颜色
+	color：rgb rgba #fff 英文表示颜色white，black
+3.背景
+	background-color:
+	background-image:背景图片 url(相对路径);
+	background-size:其中cover表示覆盖
+	background-repeat:图片平铺，其中no-repeat表示不平铺
+	background-position？？？？？？？
+4.边框
+	border:1px solid black;
+	border-left
+	border-right,bottom,top
+5.对齐
+	容器：默认是居左的，margin：0 auto(0表示上下，其中auto是左右自适应)
+			margin: 10px;/*上下左右*/
+			margin: 10px auto;/*上下，左右（auto自适应）*/
+			margin: 0 10px 5px;	/*上外边距，左右，下*/
+			margin: 10px,12px,5px,23px;/*上，右，下，左*/	
+	文本：text-align：center（left right justify两端对齐只对英文有效）
+	图片文字对齐：vertical-align：top，bottom，middle

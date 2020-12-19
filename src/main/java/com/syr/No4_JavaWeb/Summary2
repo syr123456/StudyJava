@@ -1,0 +1,9 @@
+Servlet:
+    1.servlet简介：
+        1.1 Servlet是sun公司动态开发web的一门技术
+        1.2 sun在这些qpi中提供的一个接口是：servlet
+        1.3 步骤：编写一个类，实现Servlet接口
+                 把开发好的java类部署到web服务器中
+        1.4把实现了Servlet的接口java程序叫做Servlet
+    2.Servlet原理：
+        2.1Servlet是由web服务器调用，web服务器在收到浏览器的请求之后

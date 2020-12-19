@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>heathcode</title>
+		<style>
+			div td{
+				/*>直接孩子,空格子孙后代，逗号表示并列元素*/
+				border: 1px solid black;
+				width: 160px;
+				height: 50px;
+				text-align: center;
+				border-radius: 45%;
+			}
+		</style>
+	</head>
+	<body background="img/01.jpg">
+		<h1 align="center">河南健康码</h1>
+		<table align="center" id="title">
+				<tr>
+					<td style="width:20px"><hr/></td>
+					<td>抗击疫情我们一起努力</td>
+					<td style="width:20px"><hr/></td>
+				</tr>
+		</table>
+		<br/>
+		<h5>请选择城市</h5>
+		<div>
+			<table align="center" cellspacing="20" cellpadding="0">
+				<tr>
+					<td>郑州</td>
+					<td>开封</td>
+					<td>洛阳</td>
+				</tr>
+				<tr>
+					<td>平顶山</td>
+					<td>安阳</td>
+					<td>鹤壁</td>
+				</tr>
+				<tr>
+					<td>新乡</td>
+					<td>焦作</td>
+					<td>濮阳</td>
+				</tr>
+				<tr>
+					<td>许昌</td>
+					<td>漯河</td>
+					<td>三门峡</td>
+				</tr>
+				<tr>
+					<td>南阳</td>
+					<td>商丘</td>
+					<td>信阳</td>
+				</tr>
+				<tr>
+					<td>周口</td>
+					<td>驻马店</td>
+					<td>济源</td>
+				</tr>
+				<tr>
+					<td colspan="3">欢迎使用</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

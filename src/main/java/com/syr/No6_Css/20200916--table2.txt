@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人简历</title>
+		<style>
+			table,td{
+				border:solid black;
+				border-collapse:collapse;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="1" width="420px" align="center">
+			<caption>
+				<b>个人简历</b>
+			</caption>
+			<tr>
+				<td>姓名</td>
+				<td>宋亚茹</td>
+				<td>性别</td>
+				<td>女</td>
+				<td rowspan="4" width="80px" height="80px">
+					<img src="img/songyaru.png" alt="" width="80px" height="80px">
+				</td>
+			</tr>
+			<tr>
+				<td>民族</td>
+				<td>汉</td>
+				<td>出生年月</td>
+				<td>19XX-XX-XX</td>
+			</tr>
+			<tr>
+				<td>身高</td>
+				<td>163cm</td>
+				<td>身体状况</td>
+				<td>正常</td>
+			</tr>
+			<tr>
+				<td>学历</td>
+				<td>本科</td>
+				<td>专业</td>
+				<td>计算机科学与技术</td>
+			</tr>
+			<tr>
+				<td>籍贯</td>
+				<td>河北省</td>
+				<td>就读学校</td>
+				<td colspan="2" align="center">河南工业大学</td>
+			</tr>
+			<tr>
+				<td>学习经历</td>
+				<td colspan="4">
+					<br>2017年获得……</br>
+					<br>2018年获得……</br>
+				</td>
+			</tr>
+			<tr>
+				<td>社会实践</td>
+				<td colspan="4">
+					<br>2017年参加社会实践如下……</br>
+					<br>2018年参加社会实践如下……</br>
+				</td>
+			</tr>
+			<tr>
+				<td>个人评价</td>
+				<td colspan="4">
+					<br>乐于助人</br>
+					<br>上进心足</br>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

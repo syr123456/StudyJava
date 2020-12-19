@@ -6,16 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ThreadTest" />
+        <module name="JavaWeb" />
+        <module name="javaweb-01" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="JavaWeb" target="8" />
+      <module name="javaweb-01" target="8" />
       <module name="ThreadTest" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="ThreadTest" options="-parameters" />
+      <module name="JavaWeb" options="-parameters" />
+      <module name="ThreadTest" options="" />
+      <module name="javaweb-01" options="-parameters" />
     </option>
   </component>
 </project>

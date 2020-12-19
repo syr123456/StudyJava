@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form表单</title>
+	</head>
+	<body>
+		<!--method默认get提交-->
+		<!--hr水平线，br换行-->
+		<form action="" method="">
+			头像： 
+			<input type="image" src="img/songyaru.png" style="width:80px"/>
+			<br/>
+			姓名：
+			<input type="text" name="username" style="width:150px"/>
+			<br/>
+			密码：
+			<input type="password" name="pwd" style="width:150px"/>
+			<br/>
+			性别：
+			<!--name相同的sex属于同一类型，否则可以都选择-->
+			<input type="radio" name="sex" value="男"/>男
+			<input type="radio" name="sex" value="女"/>女
+			<br/>
+			爱好：
+			<input type="checkbox" name="hobby" value="篮球"/>篮球
+			<input type="checkbox" name="hobby" value="足球"/>足球
+			<br/>
+			文件上传：
+			<input type="file" name="file"/>
+			<br/>
+			拾色器：
+			<input type="color" name="color"/>
+			<br/>
+			请选择时间：
+			<input type="datetime-local" name="time">
+			<br/>
+			<input type="submit" value="提交"/>
+			<input type="reset" value="重置"/>
+			<br/>
+			<hr/>
+			<br/>
+			<input type="text" placeholder="请输入你的姓名" />
+			<br/>
+			<input type="password" name="pwd" placeholder="请输入你的密码" required="required" />
+			<br/>
+			<input type="submit"/>
+			<br/>
+			
+			<select name="" id="">
+				<option value="-1">请选择你的出生年份</option>
+				<optgroup label="90后">
+					<option value="1998">1998</option>
+				    <option value="1997">1999</option>
+				</optgroup>
+			</select>.
+			
+			<!--<textarea name="" id="" cols="30" rows="10">-->
+			<textarea name="" id="" style="widht:50px;height:20px">
+				滚滚长江
+			</textarea>
+			
+			
+		</form>
+	</body>
+</html>

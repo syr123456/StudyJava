@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>datalist数据列表</title>
+	</head>
+	<body>
+		<!--datalist-->
+		<form action="">
+			请选择你的专业：
+			<input type="text" id="datalist" list="list"/>
+			<datalist id="list">
+				<option value="计算机科学与技术">计算机科学与技术</option>
+				<option value="计算机科学与技术">计算机科学与技术</option>
+				<option value="计算机科学与技术">计算机科学与技术</option>
+			</datalist>
+		</form>
+		
+		<!--fieldset-->
+		<form action="">
+			<fieldset style="border:1px solid red">
+				<legend>TFboys</legend>
+				<p>王源</p>
+				<p>王俊凯</p>
+				<p>易烊千玺</p>
+			</fieldset>>
+		</form>
+		
+		<!--ol有序列表，li-->
+		<h1>你喜欢吃什么水果？（有序列表）</h1>
+		<ol type="a">
+			<li>苹果</li>
+			<li>西瓜</li>
+		</ol>
+		
+		<!--ul无序列表，li-->
+		<h1>你喜欢吃什么水果？（无序列表）</h1>
+		<ul>
+		<!--<ul type="square">-->
+			<li>
+				苹果
+				<ul>
+					<li>红富士</li>
+					<li>
+						青苹果
+						<ul>
+							<li>真的</li>
+							<li>假的</li>
+							<li>
+								<table>
+									<tr>
+										<td>1</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>2</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>西瓜</li>
+		</ul>
+		
+		<!--dl自定义列表，dt，dd-->
+		<dl>
+			<dt>
+				语文
+				<dd>interesting</dd>
+				<dd>happiness</dd>
+			</dt>
+			<dt>
+				数学
+				<dd>interesting</dd>
+				<dd>easy</dd>
+			</dt>
+		</dl>
+		
+	</body>
+</html>
